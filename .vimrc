@@ -8,7 +8,7 @@ if has('syntax')
   syntax on
 endif
 
-"set hidden
+set hidden
 
 set wildmenu
 
