@@ -22,6 +22,9 @@ set nowrap
 
 color desert
 
+"display invisible characters
+set list
+
  "Quickly insert an empty new line without entering insert mode
 nnoremap o o<Esc>0"_D
 nnoremap O O<Esc>0"_D
