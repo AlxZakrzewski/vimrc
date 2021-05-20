@@ -21,3 +21,7 @@ set number
 set nowrap
 
 color desert
+
+ "Quickly insert an empty new line without entering insert mode
+nnoremap o o<Esc>0"_D
+nnoremap O O<Esc>0"_D
