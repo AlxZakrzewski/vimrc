@@ -18,7 +18,7 @@ set hidden
 " Mappings
 imap jk <Esc>
 nnoremap S :%s//g<Left><Left>
-nnoremap <leader>nk :noh<CR>
+nnoremap <leader>n :noh<CR>
 nnoremap <leader>t :term<CR>
 
 " Colors
