@@ -28,6 +28,7 @@ colorscheme iceberg
 
 " Persistent undo
 set undofile
+set undodir='~/.vim/undodir'
 
 " Indentation
 set expandtab
