@@ -1,7 +1,14 @@
 let mapleader =" "
 
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'cocopon/iceberg.vim'
+Plug 'junegunn/goyo.vim'
+
+call plug#end()
+
 " Finding files
-set path+=**
 set wildmenu
 
 " Switches
