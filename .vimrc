@@ -3,6 +3,8 @@ let mapleader =" "
 " Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'junegunn/goyo.vim'
 
@@ -27,6 +29,7 @@ imap jk <Esc>
 nnoremap S :%s//g<Left><Left>
 nnoremap <leader>n :noh<CR>
 nnoremap <leader>t :term<CR>
+nnoremap <leader><leader> :Files<Cr>
 
 " Colors
 syntax on
@@ -50,12 +53,15 @@ set so=999
 set hlsearch
 set incsearch
 
+" Remove banner from netrw
+let g:netrw_banner = 0
+
 " Smart search
 set ignorecase
 set smartcase
 
 " Disable automatic commenting on new line
-set formatoptions-=cro
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically deletes all trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
