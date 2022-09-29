@@ -30,6 +30,7 @@ nnoremap S :%s//g<Left><Left>
 nnoremap <leader>n :noh<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <leader><leader> :Files<Cr>
+nnoremap <leader>b :Buffers<Cr>
 
 " Colors
 syntax on
