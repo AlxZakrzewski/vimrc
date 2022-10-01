@@ -26,6 +26,7 @@ set hidden
 
 " Mappings
 imap jk <Esc>
+imap ss s///g<Left><Left><Left>
 nnoremap S :%s//g<Left><Left>
 nnoremap <leader>n :noh<CR>
 nnoremap <leader>t :term<CR>
