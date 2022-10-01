@@ -31,6 +31,7 @@ nnoremap <leader>n :noh<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <leader><leader> :Files<Cr>
 nnoremap <leader>b :Buffers<Cr>
+vmap y y`]
 
 " Colors
 syntax on
