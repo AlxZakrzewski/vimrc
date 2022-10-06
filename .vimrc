@@ -24,6 +24,9 @@ set t_Co=256
 " Buffers
 set hidden
 
+" Splits
+set splitbelow
+
 " Mappings
 imap jk <Esc>
 nnoremap <leader>s is///g<Left><Left><Left>
