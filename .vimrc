@@ -58,6 +58,7 @@ set so=999
 " Highlights
 set hlsearch
 set incsearch
+set nohlsearch
 
 " Remove banner from netrw
 let g:netrw_banner = 0
