@@ -76,3 +76,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Yaml
 autocmd Filetype yaml set cursorcolumn
 autocmd Filetype yml set cursorcolumn
+
+"" Turn off autoindent
+set noai
