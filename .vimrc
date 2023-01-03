@@ -35,6 +35,8 @@ nnoremap <leader>n :noh<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <leader><leader> :Files<Cr>
 nnoremap <leader>b :Buffers<Cr>
+nnoremap  :set paste<Cr>
+nnoremap <leader>o :set nopaste<Cr>
 vmap y y`]
 
 " Colors
@@ -78,5 +80,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype yaml set cursorcolumn
 autocmd Filetype yml set cursorcolumn
 
-"" Turn off autoindent
+" Turn off autoindent
 set noai
+
+" Set paste toggle
+set pastetoggle=<F2>
