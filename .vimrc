@@ -85,3 +85,6 @@ set noai
 
 " Set paste toggle
 set pastetoggle=<F2>
+
+" :h unnamedplus
+set clipboard=unnamedplus
