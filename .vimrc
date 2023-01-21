@@ -1,90 +1,97 @@
 let mapleader =" "
 
-" Plugins
+" install vim plug https://github.com/junegunn/vim-plug - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" install fzf - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+" run :PlugInstall in vim
+" plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'junegunn/goyo.vim'
+plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+plug 'junegunn/fzf.vim'
+plug 'cocopon/iceberg.vim'
+plug 'junegunn/goyo.vim'
+plug 'sjl/gundo.vim'
 
 call plug#end()
 
-" Finding files
+" finding files
 set wildmenu
 
-" Switches
+" switches
 set number
 set relativenumber
-nmap <F7> :set number!<CR> :set relativenumber!<CR>
+nmap <f7> :set number!<cr> :set relativenumber!<cr>
 
-" Terminals
-set t_Co=256
+" terminals
+set t_co=256
 
-" Buffers
+" buffers
 set hidden
 
-" Splits
+" splits
 set splitbelow
 
-" Mappings
-imap jk <Esc>
-nnoremap <leader>s is///g<Left><Left><Left>
-nnoremap S :%s//g<Left><Left>
-nnoremap <leader>n :noh<CR>
-nnoremap <leader>t :term<CR>
-nnoremap <leader><leader> :Files<Cr>
-nnoremap <leader>b :Buffers<Cr>
-nnoremap  :set paste<Cr>
-nnoremap <leader>o :set nopaste<Cr>
+" mappings
+imap jk <esc>
+nnoremap <leader>s is///g<left><left><left>
+nnoremap s :%s//g<left><left>
+nnoremap <leader>n :noh<cr>
+nnoremap <leader>t :term<cr>
+nnoremap <leader><leader> :files<cr>
+nnoremap <leader>b :buffers<cr>
+nnoremap  :set paste<cr>
+nnoremap <leader>o :set nopaste<cr>
 vmap y y`]
 
-" Colors
+" colors
 syntax on
 set background=dark
 colorscheme iceberg
 
 " Persistent undo
-set undofile
-set undodir='~/.vim/undodir'
+if has('persistent_undo')
+    silent !mkdir ~/.vim/undodir > /dev/null 2>&1
+    set undodir=~/.vim/undodir
+    set undofile
+endif
 
-" Indentation
+" indentation
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Navigation
+" navigation
 set so=999
 
-" Highlights
+" highlights
 set hlsearch
 set incsearch
 set nohlsearch
 
-" Remove banner from netrw
+" remove banner from netrw
 let g:netrw_banner = 0
 
-" Smart search
+" smart search
 set ignorecase
 set smartcase
 
-" Disable automatic commenting on new line
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" disable automatic commenting on new line
+autocmd filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Automatically deletes all trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
+" automatically deletes all trailing whitespace on save
+autocmd bufwritepre * :%s/\s\+$//e
 
-"" Filetypes
-" Yaml
-autocmd Filetype yaml set cursorcolumn
-autocmd Filetype yml set cursorcolumn
+"" filetypes
+" yaml
+autocmd filetype yaml set cursorcolumn
+autocmd filetype yml set cursorcolumn
 
-" Turn off autoindent
+" turn off autoindent
 set noai
 
-" Set paste toggle
-set pastetoggle=<F2>
+" set paste toggle
+set pastetoggle=<f2>
 
 " :h unnamedplus
 set clipboard=unnamedplus
