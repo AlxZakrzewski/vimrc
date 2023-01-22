@@ -95,3 +95,6 @@ set pastetoggle=<f2>
 
 " :h unnamedplus
 set clipboard=unnamedplus
+
+" disable swap files
+set noswapfile
