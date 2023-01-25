@@ -37,8 +37,8 @@ nnoremap <leader>s is///g<left><left><left>
 nnoremap s :%s//g<left><left>
 nnoremap <leader>n :noh<cr>
 nnoremap <leader>t :term<cr>
-nnoremap <leader><leader> :files<cr>
-nnoremap <leader>b :buffers<cr>
+nnoremap <leader><leader> :Files<cr>
+nnoremap <leader>b :Buffers<cr>
 nnoremap  :set paste<cr>
 nnoremap <leader>o :set nopaste<cr>
 vmap y y`]
@@ -48,12 +48,9 @@ syntax on
 set background=dark
 colorscheme iceberg
 
-" Persistent undo
-if has('persistent_undo')
-    silent !mkdir ~/.vim/undodir > /dev/null 2>&1
-    set undodir=~/.vim/undodir
-    set undofile
-endif
+"persistent undo
+set undodir=~/.vim/undodir
+set undofile
 
 " indentation
 set expandtab
