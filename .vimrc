@@ -6,11 +6,11 @@ let mapleader =" "
 " plugins
 call plug#begin('~/.vim/plugged')
 
-plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-plug 'junegunn/fzf.vim'
-plug 'cocopon/iceberg.vim'
-plug 'junegunn/goyo.vim'
-plug 'sjl/gundo.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'sjl/gundo.vim'
 
 call plug#end()
 
@@ -32,15 +32,14 @@ set hidden
 set splitbelow
 
 " mappings
+execute "set <M-z>=\033z"
+nnoremap <M-z> i<Space><esc>
 imap jk <esc>
 nnoremap <leader>s is///g<left><left><left>
-nnoremap s :%s//g<left><left>
+nnoremap S :%s//g<left><left>
 nnoremap <leader>n :noh<cr>
-nnoremap <leader>t :term<cr>
 nnoremap <leader><leader> :Files<cr>
 nnoremap <leader>b :Buffers<cr>
-nnoremap  :set paste<cr>
-nnoremap <leader>o :set nopaste<cr>
 vmap y y`]
 
 " colors
@@ -48,7 +47,6 @@ syntax on
 set background=dark
 colorscheme iceberg
 
-"persistent undo
 set undodir=~/.vim/undodir
 set undofile
 
