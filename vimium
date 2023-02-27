@@ -1,2 +1,4 @@
 Vimium mappings
 map <c-6> visitPreviousTab
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
