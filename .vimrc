@@ -40,6 +40,7 @@ nnoremap S :%s//g<left><left>
 nnoremap <leader>n :noh<cr>
 nnoremap <leader><leader> :Files<cr>
 nnoremap <leader>b :Buffers<cr>
+vnoremap p "_dP
 vmap y y`]
 
 " colors
