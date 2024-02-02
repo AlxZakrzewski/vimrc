@@ -33,8 +33,6 @@ set splitbelow
 
 " mappings
 execute "set <M-z>=\033z"
-nnoremap <M-z> i<Space><esc>
-imap jk <esc>
 nnoremap <leader>s is///g<left><left><left>
 nnoremap S :%s//g<left><left>
 nnoremap <leader>n :noh<cr>
