@@ -32,7 +32,6 @@ set hidden
 set splitbelow
 
 " mappings
-execute "set <M-z>=\033z"
 nnoremap <leader>s is///g<left><left><left>
 nnoremap S :%s//g<left><left>
 nnoremap <leader>n :noh<cr>
@@ -92,3 +91,6 @@ set clipboard=unnamedplus
 
 " disable swap files
 set noswapfile
+
+" opacity
+hi Normal guibg=NONE ctermbg=NONE
